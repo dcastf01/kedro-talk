@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  dev:
+    build:
+      context: .
+    working_dir: /home/usr/code
+    # image: jupyter/minimal-notebook
+    volumes:
+      - type: bind
+        source: ..
+        target: /home/usr/code
+        consistency: delegated
+    tty: True
+    

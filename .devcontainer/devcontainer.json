@@ -1,0 +1,97 @@
+{
+
+
+ "name":"container kedro talk",
+ "dockerComposeFile": "./docker-compose.yml",
+ "service": "dev",
+ "workspaceFolder": "/home/usr/code",
+ "containerEnv": {
+        "SHELL": "/bin/bash"
+    },
+ "customizations": {
+    "vscode": {
+        "extensions": [
+            "ms-python.python",
+            "ms-toolsai.jupyter",
+            "ms-python.isort",
+            "ms-python.vscode-pylance",
+            "mutantdino.resourcemonitor",
+            "ms-azuretools.vscode-docker",
+            "mhutchie.git-graph",
+            "ms-python.flake8",
+            "eamodio.gitlens",
+            "redhat.vscode-yaml",
+            "esbenp.prettier-vscode",
+            "elagil.pre-commit-helper",
+            "charliermarsh.ruff"
+    ],
+    "settings": {
+            "editor.rulers": [
+                    120
+            ],
+            "files.trimFinalNewlines": true,
+            "files.trimTrailingWhitespace": true,
+            "files.insertFinalNewline": true,
+            "isort.args": [
+                    "--py", "311", "--profile", "black"
+            ],
+            "ruff.format.args":["--config=pyproject.toml"],
+
+            "flake8.args": [
+                    "--max-complexity",
+                    "10",
+                    "--max-line-length",
+                    "120",
+                    "--ignore",
+                    "E203"
+            ],
+            "python.defaultInterpreterPath": "/usr/local/bin/python",
+            "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                            "source.organizeImports": true
+                    },
+            "[yaml]": {
+                    "editor.defaultFormatter": "redhat.vscode-yaml"
+            },
+            "[json]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+            },
+            "git.autofetch": true,
+            "terminal.integrated.defaultProfile.windows": "Command Prompt",
+            "jupyter.askForKernelRestart": false,
+            // "dev.containers.copyGitConfig": false,
+            // "dev.containers.gitCredentialHelperConfigLocation": "none",
+            "files.exclude": {
+                    "**/.git": false
+            },
+            "editor.inlineSuggest.enabled": true,
+            "git.suggestSmartCommit": false,
+            "yaml.format.bracketSpacing": false,
+            "yaml.format.printWidth": 120,
+            "prettier.printWidth": 120,
+            "editor.formatOnSave": true,
+            "editor.guides.bracketPairs": true
+    }
+}
+}
+// Add postStartCommand to run commands after the container is created.
+// "postStartCommand": "nbstripout --install & pre-commit install",
+
+// Use 'postCreateCommand' to run commands after the container is created.
+// "postCreateCommand": ".devcontainer/komodo_setup.bat"
+// "initializeCommand": "dir"
+// "initializeCommand": "docker login ghcr.io --username ${devcontainer:MLFLOW_TRACKING_URI} --password ${env:IMAGE} "
+// Use this environment variable if you need to bind mount your local source code into a new container.
+
+
+// Use 'forwardPorts' to make a list of ports inside the container available locally.
+// "forwardPorts": [],
+
+
+// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+// "remoteUser": "root"
+
+}

@@ -1,0 +1,3 @@
+heart:
+  type: pandas.CSVDataset
+  filepath: data/${globals:folders.01_raw}/heart.csv

@@ -1,0 +1,5 @@
+
+classifier:
+  type: pickle.PickleDataset
+  filepath: data/${globals:folders.06_models}/classifier.pickle
+  versioned: true

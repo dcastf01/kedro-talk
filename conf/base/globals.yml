@@ -1,0 +1,7 @@
+
+folders:
+  01_raw: 01_raw
+  02_intermediate: 02_intermediate
+
+  06_models: 06_models
+  08_reporting: 08_reporting
