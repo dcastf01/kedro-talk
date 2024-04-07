@@ -1,4 +1,4 @@
-# kedro-talk
+# MLOps in healthcare, a first approach using kedro
 
 This is a repository prepare for a talk in Biopole 22-04-2024. Please feel free to use it.
 
